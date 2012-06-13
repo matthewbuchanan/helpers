@@ -23,6 +23,10 @@ This plugin converts a three- or six-digit hexadecimal colour value into its RGB
 
 Sample usage:
 
-    var color = $.hexColorToRGB("#ace");
+    var rgb = $.hexColorToRGB("#ace");
 
 The returned variable is an object with `r`, `g` and `b` properties represented as integer values between 0 and 255.
+
+Using the `rgb` object, you can generate an RGBA string for use as a CSS attribute. For example, to output the colour with 50% opacity:
+
+    var rgba = "rgba(" + rgb.r + "," + rgb.g + "," + rgb.b + ",0.5)";
